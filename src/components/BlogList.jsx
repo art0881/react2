@@ -148,9 +148,9 @@ function getBlogWordEnding(count) {
             {currentBlogs.map((e) => (
               <div className='blog' key={e.id}>
                 <div className='blog-w' title={e.id}>
-                  <Link to={`/blogs/${e.id}`}>
+                  
                     <div className='blog-title'>
-                      <h2 className='mrl' style={{ color: 'rgb(68 67 67)'}}>
+                      <h2 className='mrl' style={{ color: 'rgb(68 67 67)', fontFamily: "system-ui"}}>
                         {e.title}
                       </h2>
                      
@@ -160,6 +160,7 @@ function getBlogWordEnding(count) {
                     </p><div className='short-head'>
                     <p className='date'>{formatDate(new Date(e.date))}</p> <span className='author-name short-center-text'> <img  style={{marginRight:"5px",width:"15px"}} className='header-add' alt="" src='https://www.pikpng.com/pngl/b/167-1671043_ykle-wode-svg-png-icon-free-download-edit.png' />
            Автор: {e.author}</span></div>
+           <Link to={`/blogs/${e.id}`}>
                     <button className='button'>читать дальше...</button>
                   </Link>
                 </div>

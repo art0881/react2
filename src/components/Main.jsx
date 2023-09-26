@@ -26,7 +26,7 @@ const Main = () => {
     return () => abortCont.abort();
   }, []);
 
-  
+  document.title = "Rashid Blog"
   return (
     <div className='main-center'>
       {loading && <div>Загрузка...</div>}

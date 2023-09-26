@@ -88,7 +88,8 @@ align-items: center;
     padding: 10px;
 }
 .text-blog{
-  color: #696767;
+  color: #888888c7;
+    text-shadow: 0.1px 0.1px 0.2px #8d8c8c;
 }
 .author-name{
   color: #91908f;
@@ -140,8 +141,9 @@ border-radius: 10px;
 padding: 10px;
 width: 80%;
 background-color: #fafafa;
+box-shadow: 1px 1px 5px #b9b5b5;
 margin: 10px 0 10px 0;
-border: 1px solid #cccdd2;
+/* border: 1px solid #cccdd2; */
 }
 .blog:hover{
   background-color: #edeef1;
