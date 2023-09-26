@@ -1,22 +1,45 @@
 body{
-padding: 0;
+  padding: 0;
 margin: 0;
+color:rgb(68 67 67);
+background: whitesmoke;
 font-family: Arial, Helvetica, sans-serif;
 }
 .App {
   margin: 0 auto;
-    width: 800px;
+    width: 750px;
     padding: 0;
 }
-
+.date{
+  color: #91908f;
+  font-weight: 100;
+  font-size: 12px;
+  margin-left: 13px;
+}
+.main-center{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 .header{
   width: 100%;
     display: flex;
     height: 50px;
-    margin: 10px 0 70px 0;
+    border-bottom: 1px solid #cccdd2;
+    padding: 10px;
+    margin: 10px 0 30px 0;
     cursor: pointer;
     align-items: center;
     justify-content: space-between;
+}
+.header1{
+  display: flex;
+  height: 50px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 .flex{
   display: flex;
@@ -24,6 +47,7 @@ font-family: Arial, Helvetica, sans-serif;
 .li{
   font-size: 20px;
     padding: 10px;
+    border: 1px solid #cac5c500;
     cursor: pointer;
 }
 a{
@@ -33,10 +57,10 @@ a{
 
 }
 .li:hover{
-  background-color: rgb(240, 92, 92);
+  border: 1px solid #cac5c5;
   border-radius: 5px;
   transition: 0.5s; 
-  color: white;
+  background: #ede9e9;
 }
 .form{
   display: flex;
@@ -46,12 +70,81 @@ a{
   display: flex;
     align-items: center;
     
-}
-.not-page{
+  }
+  .blog-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .not-page{
 display: flex;
 justify-content: center;
 align-items: center;
     flex-direction: column;
+}
+.blog-w{
+  width: 97%;
+    padding: 10px;
+}
+.text-blog{
+  color: #696767;
+}
+.author-name{
+  color: #91908f;
+    font-size: 14px;
+    margin-right: 20px;
+    word-wrap: break-word;
+}
+.w97{
+  width: 97%;
+
+    word-wrap: break-word;
+}
+.create-blog{
+  background: white;
+    width: 80%;
+    padding: 30px;
+    margin: 30px 0 40px 0;
+    box-sizing: border-box;
+    border: 1px solid #cccdd2;
+    border-radius: 10px;
+}
+.nav-blog{
+  padding: 15px;
+  background: #f3efee;
+  cursor: pointer;
+  border: 1px solid #cccdd2;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.nav-blog:hover{
+  background-color: #e5e5e8;
+}
+.blog-det{
+  border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    background-color: #fafafa;
+    margin: 10px 0 10px 0;
+    border: 1px solid #cccdd2;
+}
+.mrl{
+  margin-left: 10px;
+  margin: 13px;
+  word-wrap:break-word;
+      width: 95%;
+}
+.blog{
+border-radius: 10px;
+padding: 10px;
+width: 80%;
+background-color: #fafafa;
+margin: 10px 0 10px 0;
+border: 1px solid #cccdd2;
+}
+.blog:hover{
+  background-color: #edeef1;
 }
 .input{
     padding: 10px;
@@ -60,25 +153,157 @@ align-items: center;
     font-size: 20px;
     border: 1px solid #b2a6a6;
 }
-button{
+.button{
   background-color: #c9c9cf;
     border: 0;
     cursor: pointer;
-    padding: 10px;
+    padding: 13px;
     font-size: 15px;
     border-radius: 5px;
     margin: 2px;
+    width: 100%;
+    font-weight: 600;
+    color: #4e4b4b;
 }
-button:hover{
-  background-color: #e6e3e3;
+.p15{
+  padding: 15px;
 }
+.button:hover{
+  background-color: #333;
+  color: #fff;
+}
+
 .active{
-  background-color: rgb(240, 92, 92);
+  border: 1px solid #cac5c5;
   border-radius: 5px;
-  color: white;
+  background: #ede9e9;
 }
 .logo{
   font-size: 30px;
-  color: red;
+  color: rgb(68, 67, 67);
+  font-family: cursive;
+}
+.header-add{
+  display: block;
+  width: 25px;
+}
+.blog-det-text{
+  padding: 0 25px 25px 25px;
+}
+.det-text{
+  line-height: 1.5;
+    color: #555353;
+    font-size: 17px;
+}
+/* Ваш файл стилей (например, styles.css) */
 
+/* Стили для кнопки "Наверх" */
+#scroll-to-top {
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c9c9cf;
+  color: #4e4b4b;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#scroll-to-top:hover {
+  background-color: #e3dfdf;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px 0;
+}
+
+.pagination button {
+  background-color: #eee;
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.pagination button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination span {
+  margin: 0 5px;
+  font-weight: bold;
+}
+.short-blog{
+  display: flex;
+  color: #696767;
+  padding: 10px;
+  width: 80%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.short-center-text{
+  display: flex;
+    align-items: center;
+}
+
+/* Стилизация основного контейнера select */
+.custom-select {
+  width: 150px; /* Ширина select-блока */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+/* Стилизация невидимого нативного select */
+.custom-select select {
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  
+  border: none;
+  background-color: transparent; /* Прозрачный фон */
+  outline: none;
+}
+
+/* Стилизация стрелочки */
+
+
+/* Стилизация hover на select */
+.custom-select:hover {
+  border-color: #bebcbc; /* Цвет рамки при наведении */
+}
+
+/* Стилизация при фокусе select */
+.custom-select select:focus {
+  outline: none;
+}
+
+.short-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#ddlProducts *
+{
+  color: #414040;
+
+ background-color: rgb(244, 240, 240);
 }
