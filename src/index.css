@@ -4,6 +4,11 @@ margin: 0;
 color:rgb(68 67 67);
 background: whitesmoke;
 font-family: Arial, Helvetica, sans-serif;
+background-position: center;
+    background-size: cover;
+    background: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1613636478_35-p-fon-dlya-prezentatsii-gori-55.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .App {
   margin: 0 auto;
@@ -60,7 +65,7 @@ a{
   border: 1px solid #cac5c5;
   border-radius: 5px;
   transition: 0.5s; 
-  background: #ede9e9;
+  background: #ffffffc2;
 }
 .form{
   display: flex;
@@ -88,7 +93,7 @@ align-items: center;
     padding: 10px;
 }
 .text-blog{
-  color: #888888c7;
+  color: #585656c7;
     text-shadow: 0.1px 0.1px 0.2px #8d8c8c;
 }
 .author-name{
@@ -103,12 +108,12 @@ align-items: center;
     word-wrap: break-word;
 }
 .create-blog{
-  background: white;
+  background-color: #ffffffe6;
     width: 80%;
     padding: 30px;
     margin: 30px 0 40px 0;
     box-sizing: border-box;
-    border: 1px solid #cccdd2;
+    border: 1px solid #ffffffe6;
     border-radius: 10px;
 }
 .nav-blog{
@@ -126,7 +131,7 @@ align-items: center;
   border-radius: 10px;
     padding: 10px;
     width: 80%;
-    background-color: #fafafa;
+    background-color: white;
     margin: 10px 0 10px 0;
     border: 1px solid #cccdd2;
 }
@@ -145,9 +150,7 @@ box-shadow: 1px 1px 5px #b9b5b5;
 margin: 10px 0 10px 0;
 /* border: 1px solid #cccdd2; */
 }
-.blog:hover{
-  background-color: #edeef1;
-}
+
 .input{
     padding: 10px;
     outline: none;
@@ -171,14 +174,14 @@ margin: 10px 0 10px 0;
   padding: 15px;
 }
 .button:hover{
-  background-color: #333;
+  background-color: #3595c8;
   color: #fff;
 }
 
 .active{
   border: 1px solid #cac5c5;
   border-radius: 5px;
-  background: #ede9e9;
+  background: #ffffffc2;
 }
 .logo{
   font-size: 30px;
@@ -251,7 +254,7 @@ margin: 10px 0 10px 0;
 }
 .short-blog{
   display: flex;
-  color: #696767;
+  color: #363535;
   padding: 10px;
   width: 80%;
   align-items: center;
@@ -265,30 +268,43 @@ margin: 10px 0 10px 0;
 
 /* Стилизация основного контейнера select */
 .custom-select {
-  width: 150px; /* Ширина select-блока */
-  border: 1px solid #ccc;
-  border-radius: 4px;
   margin-left: 10px;
+  
+  padding-right: 11px;
   overflow: hidden;
 }
-
+.search-blog{
+  font-size: 15px;
+    padding: 10px;
+    border: 1px solid #827d7dbf;
+    border-radius: 5px;
+    width: 180px;
+    background-color: #ffffffed;
+    outline: none;
+}
+.search-box{
+  margin-right: -30px;
+}
 /* Стилизация невидимого нативного select */
 .custom-select select {
   padding: 5px;
   cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 16px;
-  
+  border: 1px solid #ccc;
   border: none;
-  background-color: transparent; /* Прозрачный фон */
+  background-color:#ffffffc2; /* Прозрачный фон */
   outline: none;
 }
 
 /* Стилизация стрелочки */
 
 
-/* Стилизация hover на select */
-.custom-select:hover {
-  border-color: #bebcbc; /* Цвет рамки при наведении */
+
+.custom-select select:hover {
+  background-color: #ffffff99;
+ /* Цвет рамки при наведении */
 }
 
 /* Стилизация при фокусе select */

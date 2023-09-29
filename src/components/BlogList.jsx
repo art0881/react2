@@ -6,6 +6,7 @@ const BlogList = ({ blog }) => {
   const blogsPerPage = 5; // Количество блогов на странице
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState('newest'); // Начальная сортировка: новые записи
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -67,7 +68,10 @@ const BlogList = ({ blog }) => {
 
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = sortedBlog.slice(indexOfFirstBlog, indexOfLastBlog);
+  const filteredBlogs = sortedBlog.filter((post) =>
+  post.title.toLowerCase().includes(searchTerm.toLowerCase())
+);
+const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -133,13 +137,24 @@ function getBlogWordEnding(count) {
            <p  className='short-center-text'>
             <img  style={{marginRight:"5px"}} className='header-add' alt="" src='https://cdn2.iconfinder.com/data/icons/office-125/1000/news-1024.png' />
            Всего {totalBlogs} {getBlogWordEnding(totalBlogs)}</p>
-         <div className='short-center-text'> Сортировать по:<img  style={{marginRight:"5px"}} className='header-add' alt="" src='https://www.svgrepo.com/show/379655/sort-amount-down.svg' /><div className='custom-select'> 
+           
+           <div className="search-box">
+  <input
+    type="text"
+    className='search-blog'
+    placeholder="Поиск по заголовку"
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+  />
+</div>
+         <div className='short-center-text'> <img  style={{marginRight:"5px"}} className='header-add' alt="" src='https://www.svgrepo.com/show/379655/sort-amount-down.svg' /><div className='custom-select'> 
           <select id='ddlProducts' value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
             <option value='newest'>Новые записи</option>
             <option value='oldest'>Старые записи</option>
           </select></div></div>
         </label>
       </div>
+     
       <div className='main-center'>
         {currentBlogs.length === 0 ? (
           <p>Нет блогов</p>
